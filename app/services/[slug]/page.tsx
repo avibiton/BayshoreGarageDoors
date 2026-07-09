@@ -106,28 +106,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const heroImages: Record<string, { src: string; alt: string }> = {
   "garage-door-repair": {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
-    alt: "Garage door repair technician at work",
+    src: "https://images.unsplash.com/photo-1649038780045-235e4b6e40b4?w=1600&q=80",
+    alt: "Technician repairing garage door hardware with a wrench",
   },
   "spring-replacement": {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80",
-    alt: "Garage door spring mechanism close-up",
+    src: "https://images.unsplash.com/photo-1745449562896-71ba57d1e2b3?w=1600&q=80",
+    alt: "Metal torsion springs stacked on a workshop shelf",
   },
   "opener-repair": {
-    src: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1600&q=80",
-    alt: "Garage door opener motor installation",
+    src: "https://images.unsplash.com/photo-1780034766462-e8af5f2c9e22?w=1600&q=80",
+    alt: "Open electrical control panel showing wiring and components",
   },
   "door-installation": {
-    src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80",
-    alt: "New residential garage door installation",
+    src: "https://images.unsplash.com/photo-1777106322601-578dc9213ace?w=1600&q=80",
+    alt: "Modern two-story home with a new dark garage door",
   },
   "emergency-service": {
-    src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=80",
-    alt: "Emergency garage door service van at a home",
+    src: "https://images.unsplash.com/photo-1677938438599-a55528c41b2c?w=1600&q=80",
+    alt: "Technician with toolbox ready for emergency garage door service",
   },
   "cable-repair": {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80",
-    alt: "Garage door cable and track hardware",
+    src: "https://images.unsplash.com/photo-1583041878990-59c1abd6f7a7?w=1600&q=80",
+    alt: "Worker holding a metal repair tool for cable and track work",
   },
 };
 
