@@ -13,8 +13,8 @@ export default function ServicesPage() {
     <div>
       <section className="relative py-24 px-4 text-center overflow-hidden flex items-center justify-center min-h-[320px]">
         <Image
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"
-          alt="Garage door services — Bay Shore NY"
+          src="/images/technician-repair.jpg"
+          alt="Bay Shore Garage Door technician repairing a garage door track"
           fill
           priority
           className="object-cover object-center"

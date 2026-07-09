@@ -13,8 +13,8 @@ export default function AboutPage() {
     <div>
       <section className="relative py-24 px-4 text-center overflow-hidden flex items-center justify-center min-h-[320px]">
         <Image
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80"
-          alt="Bay Shore neighborhood homes with garages"
+          src="/images/technician-install.jpg"
+          alt="Bay Shore Garage Door technician installing a garage door"
           fill
           priority
           className="object-cover object-center"

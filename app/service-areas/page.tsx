@@ -56,8 +56,8 @@ export default function ServiceAreasPage() {
     <div>
       <section className="relative py-24 px-4 text-center overflow-hidden flex items-center justify-center min-h-[320px]">
         <Image
-          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&q=80"
-          alt="Long Island suburban neighborhood streets"
+          src="/images/technician-door.jpg"
+          alt="Bay Shore Garage Door technician inspecting a residential garage door"
           fill
           priority
           className="object-cover object-center"
