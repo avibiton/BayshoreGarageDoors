@@ -4,7 +4,7 @@ export const BUSINESS = {
   phoneRaw: "6319543148",
   email: "info@bayshoregaragedoors.net",
   website: "bayshoregaragedoors.net",
-  address: "120 4th Ave, Bay Shore NY 11706",
+  address: "",
   city: "Bay Shore",
   state: "NY",
   zip: "11706",
