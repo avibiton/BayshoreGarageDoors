@@ -8,6 +8,11 @@ import { BUSINESS } from "@/lib/config";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: `Bay Shore Garage Door — Same-Day Repair & Installation | Bay Shore NY`,

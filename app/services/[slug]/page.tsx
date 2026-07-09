@@ -152,7 +152,7 @@ export default async function ServicePage({ params }: Props) {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#091528]/80" />
-        <div className="relative max-w-4xl mx-auto z-10">
+        <div className="relative w-full max-w-4xl mx-auto z-10">
           <div className="text-5xl mb-4">{service.icon}</div>
           <h1 className="text-3xl md:text-4xl font-black text-white mb-3">{service.title} — Bay Shore NY</h1>
           <p className="text-white/70 text-lg mb-6 max-w-2xl">{service.description}</p>
