@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { BUSINESS, SERVICES } from "@/lib/config";
 import ContactForm from "@/components/ContactForm";
@@ -103,18 +104,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const heroImages: Record<string, { src: string; alt: string }> = {
+  "garage-door-repair": {
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80",
+    alt: "Garage door repair technician at work",
+  },
+  "spring-replacement": {
+    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80",
+    alt: "Garage door spring mechanism close-up",
+  },
+  "opener-repair": {
+    src: "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=1600&q=80",
+    alt: "Garage door opener motor installation",
+  },
+  "door-installation": {
+    src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80",
+    alt: "New residential garage door installation",
+  },
+  "emergency-service": {
+    src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=80",
+    alt: "Emergency garage door service van at a home",
+  },
+  "cable-repair": {
+    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80",
+    alt: "Garage door cable and track hardware",
+  },
+};
+
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) notFound();
 
   const content = serviceContent[slug];
+  const heroImg = heroImages[slug] ?? heroImages["garage-door-repair"];
 
   return (
     <div>
       {/* Hero */}
-      <section className="bg-[#0f1f3d] py-16 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-24 px-4 overflow-hidden flex items-center min-h-[320px]">
+        <Image
+          src={heroImg.src}
+          alt={heroImg.alt}
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#091528]/80" />
+        <div className="relative max-w-4xl mx-auto z-10">
           <div className="text-5xl mb-4">{service.icon}</div>
           <h1 className="text-3xl md:text-4xl font-black text-white mb-3">{service.title} — Bay Shore NY</h1>
           <p className="text-white/70 text-lg mb-6 max-w-2xl">{service.description}</p>

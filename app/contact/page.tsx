@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { BUSINESS, COUPONS } from "@/lib/config";
 
@@ -11,16 +12,27 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-[#0f1f3d] py-16 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Contact Bay Shore Garage Door</h1>
-        <p className="text-white/70 text-lg mb-6">Call any time — a real technician answers, not a call center</p>
-        <a
-          href={`tel:${BUSINESS.phoneRaw}`}
-          className="inline-flex items-center gap-2 bg-[#e8390e] text-white font-black text-2xl px-8 py-4 rounded-xl hover:bg-[#c62d0a] transition-colors"
-        >
-          📞 {BUSINESS.phone}
-        </a>
-        <p className="text-white/50 text-sm mt-3">Available 24 hours · 7 days a week · Same-day service</p>
+      <section className="relative py-24 px-4 text-center overflow-hidden flex items-center justify-center min-h-[340px]">
+        <Image
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80"
+          alt="Friendly technician ready to help with garage door repair"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#091528]/80" />
+        <div className="relative z-10">
+          <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Contact Bay Shore Garage Door</h1>
+          <p className="text-white/70 text-lg mb-6">Call any time — a real technician answers, not a call center</p>
+          <a
+            href={`tel:${BUSINESS.phoneRaw}`}
+            className="inline-flex items-center gap-2 bg-[#e8390e] text-white font-black text-2xl px-8 py-4 rounded-xl hover:bg-[#c62d0a] transition-colors"
+          >
+            📞 {BUSINESS.phone}
+          </a>
+          <p className="text-white/50 text-sm mt-3">Available 24 hours · 7 days a week · Same-day service</p>
+        </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">

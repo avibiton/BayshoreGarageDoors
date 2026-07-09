@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS, SERVICE_AREAS } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -53,11 +54,22 @@ const areaDetails = [
 export default function ServiceAreasPage() {
   return (
     <div>
-      <section className="bg-[#0f1f3d] py-16 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Service Areas — Bay Shore Garage Door</h1>
-        <p className="text-white/70 text-lg max-w-2xl mx-auto">
-          Same-day garage door repair and installation throughout Bay Shore NY 11706 and all of Suffolk County, Long Island
-        </p>
+      <section className="relative py-24 px-4 text-center overflow-hidden flex items-center justify-center min-h-[320px]">
+        <Image
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&q=80"
+          alt="Long Island suburban neighborhood streets"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#091528]/80" />
+        <div className="relative z-10">
+          <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Service Areas — Bay Shore Garage Door</h1>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Same-day garage door repair and installation throughout Bay Shore NY 11706 and all of Suffolk County, Long Island
+          </p>
+        </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-16">

@@ -35,7 +35,7 @@ export default function Footer() {
                 📞 {BUSINESS.phone}
               </a>
             </div>
-            <div className="text-white/60">📍 {BUSINESS.address}</div>
+            <div className="text-white/60">📍 Bay Shore, NY 11706</div>
             <div className="text-white/60">🕐 {BUSINESS.hours}</div>
           </div>
         </div>

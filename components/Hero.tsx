@@ -1,21 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS } from "@/lib/config";
 
 export default function Hero() {
   return (
-    <section
-      className="relative min-h-[90vh] flex items-center"
-      style={{
-        background: "linear-gradient(135deg, #091528 0%, #0f1f3d 50%, #1a3a6b 100%)",
-      }}
-    >
-      {/* Background texture overlay */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80"
+        alt="Modern garage door on a residential home"
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
       />
+      {/* Dark overlay so text stays readable */}
+      <div className="absolute inset-0 bg-[#091528]/80" />
 
       <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
         {/* Left: copy */}

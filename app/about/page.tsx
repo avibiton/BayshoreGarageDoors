@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -10,11 +11,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div>
-      <section className="bg-[#0f1f3d] py-16 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Your Local Garage Door Experts in Bay Shore, NY</h1>
-        <p className="text-white/70 text-lg max-w-2xl mx-auto">
-          Bay Shore Garage Door serves homeowners throughout Bay Shore NY 11706 and all of Suffolk County. We know South Shore Long Island.
-        </p>
+      <section className="relative py-24 px-4 text-center overflow-hidden flex items-center justify-center min-h-[320px]">
+        <Image
+          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80"
+          alt="Bay Shore neighborhood homes with garages"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[#091528]/80" />
+        <div className="relative z-10">
+          <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Your Local Garage Door Experts in Bay Shore, NY</h1>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+            Bay Shore Garage Door serves homeowners throughout Bay Shore NY 11706 and all of Suffolk County. We know South Shore Long Island.
+          </p>
+        </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-4 py-16">
