@@ -11,7 +11,7 @@ export default function Hero() {
         alt="Modern garage door installer at work on a residential home"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-right md:object-center"
         sizes="100vw"
       />
       {/* Dark overlay so text stays readable */}
