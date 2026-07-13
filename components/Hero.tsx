@@ -7,8 +7,8 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80"
-        alt="Modern garage door on a residential home"
+        src="/images/hero-garage-door.jpg"
+        alt="Technician building a residential garage wall"
         fill
         priority
         className="object-cover object-center"
