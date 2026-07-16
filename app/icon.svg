@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Navy background -->
+  <rect width="32" height="32" rx="5" fill="#0f1f3d"/>
+  <!-- Door body -->
+  <rect x="5" y="9" width="22" height="17" rx="1" fill="#f0f0f0"/>
+  <!-- Panel lines -->
+  <line x1="5" y1="14" x2="27" y2="14" stroke="#0f1f3d" stroke-width="1.5"/>
+  <line x1="5" y1="19" x2="27" y2="19" stroke="#0f1f3d" stroke-width="1.5"/>
+  <line x1="5" y1="24" x2="27" y2="24" stroke="#0f1f3d" stroke-width="1.5"/>
+  <!-- Handle -->
+  <rect x="13" y="21" width="6" height="2" rx="1" fill="#e8390e"/>
+</svg>
