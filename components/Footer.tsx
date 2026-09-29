@@ -99,7 +99,7 @@ export default function Footer() {
           {BUSINESS.licenseInfo} · {BUSINESS.phone}
         </p>
         <p className="text-white/30 text-xs mt-1">
-          Serving Long Island NY · #bayshoregaragedoor #bayshoregaragedoorrepair #garagedoorrepairBayShoreNY #suffolkcountygaragedoor
+          Serving Long Island NY
         </p>
       </div>
     </footer>
