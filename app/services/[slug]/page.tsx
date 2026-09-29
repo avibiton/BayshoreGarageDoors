@@ -63,17 +63,17 @@ const serviceContent: Record<string, { body: string; bullets: string[]; price?: 
     price: "Free in-home estimate",
   },
   "emergency-service": {
-    body: `Garage doors don't break on a schedule. Bay Shore Garage Door provides 24/7 emergency service throughout Bay Shore NY 11706 — evenings, weekends, holidays, and overnight. A real technician answers every call, day or night.\n\nEmergency situations we handle include: doors completely off their tracks, broken springs with the car trapped inside, snapped cables with one side of the door dropped, and openers that have failed with no manual override accessible.\n\nWe dispatch within 2–4 hours throughout Bay Shore and surrounding Suffolk County communities. No extra charge for evening or weekend calls — our pricing is the same any time of day.`,
+    body: `Garage doors don't break on a schedule. Bay Shore Garage Door provides emergency service throughout Bay Shore NY 11706 — 7 days a week, 7am–7pm, weekends included. A real technician answers every call.\n\nEmergency situations we handle include: doors completely off their tracks, broken springs with the car trapped inside, snapped cables with one side of the door dropped, and openers that have failed with no manual override accessible.\n\nWe dispatch within 2–4 hours throughout Bay Shore and surrounding Suffolk County communities. No extra charge for weekend calls — our pricing is the same every day of the week.`,
     bullets: [
-      "24/7 availability — evenings, weekends, holidays",
+      "Open 7 days a week, 7am–7pm — weekends included",
       "2–4 hour response throughout Bay Shore",
       "Off-track emergency repair",
       "Broken spring emergency replacement",
       "Snapped cable emergency repair",
       "Car-trapped-in-garage situations",
-      "No extra charge for after-hours calls",
+      "No extra charge for weekend calls",
     ],
-    price: "Available 24/7",
+    price: "Open 7 days · 7am–7pm",
   },
   "cable-repair": {
     body: `Lifting cables are the steel cables that run from the bottom corner of each door panel up to the drum on the torsion shaft, transferring the spring's force to lift the door. When a cable snaps, the door drops hard on that side — a safety hazard and a sign you need immediate repair.\n\nBay Shore's proximity to Great South Bay puts standard steel cables at higher risk of corrosion. We use galvanized steel cables as standard for all Bay Shore cable replacements, and stainless steel for properties within direct line of the water.\n\nTrack issues — bent sections, misaligned vertical tracks, worn horizontal tracks — are another common Bay Shore repair. Most off-track situations are caused by accumulated debris in the track, a broken cable that caused one side to drop, or impact damage to the door or track from a vehicle.`,
@@ -218,7 +218,7 @@ export default async function ServicePage({ params }: Props) {
             >
               📞 {BUSINESS.phone}
             </a>
-            <p className="text-white/60 text-xs text-center mb-6">Real technician answers · Available 24/7</p>
+            <p className="text-white/60 text-xs text-center mb-6">Real technician answers · Open 7 days, 7am–7pm</p>
 
             <h3 className="text-white font-bold mb-3">Request Service</h3>
             <div className="bg-white rounded-xl p-4">

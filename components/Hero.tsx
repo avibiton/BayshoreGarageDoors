@@ -22,7 +22,7 @@ export default function Hero() {
         <div>
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-[#e8390e]/20 border border-[#e8390e]/40 rounded-full px-4 py-1.5 text-sm text-[#f97316] font-semibold mb-6">
-            ⚡ 24/7 Same-Day Service — Bay Shore NY
+            ⚡ Same-Day Service · Open 7 Days, 7am–7pm — Bay Shore NY
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
@@ -57,7 +57,7 @@ export default function Hero() {
             {[
               { icon: "✅", text: "Licensed & Insured" },
               { icon: "⚡", text: "Same-Day Service" },
-              { icon: "🚨", text: "24/7 Emergency" },
+              { icon: "🚨", text: "Emergency Service" },
               { icon: "📝", text: "Free Written Estimate" },
               { icon: "🛡️", text: "Written Warranty" },
               { icon: "👨‍🔧", text: "Local Technicians" },
@@ -82,7 +82,7 @@ export default function Hero() {
               {[
                 { label: "Response Time", value: "2–4 Hours" },
                 { label: "Service Area", value: "All of Suffolk County" },
-                { label: "Availability", value: "24/7 · 365 Days" },
+                { label: "Hours", value: "7 Days · 7am–7pm" },
                 { label: "Estimate", value: "Free Written" },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between items-center border-b border-white/10 pb-3">

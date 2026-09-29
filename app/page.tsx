@@ -28,7 +28,14 @@ export default function Home() {
       addressCountry: "US",
     },
     geo: { "@type": "GeoCoordinates", latitude: 40.7279, longitude: -73.2524 },
-    openingHours: "Mo-Su 00:00-24:00",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "07:00",
+        closes: "19:00",
+      },
+    ],
     areaServed: [
       { "@type": "City", name: "Bay Shore" },
       { "@type": "City", name: "Islip" },

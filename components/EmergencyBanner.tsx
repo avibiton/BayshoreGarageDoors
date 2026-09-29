@@ -6,10 +6,10 @@ export default function EmergencyBanner() {
       <div className="max-w-5xl mx-auto px-4 text-center">
         <div className="text-3xl mb-3">🚨</div>
         <h2 className="text-2xl md:text-3xl font-black text-white mb-3">
-          24/7 Emergency Garage Door Service — Bay Shore, NY
+          Emergency Garage Door Service — Bay Shore, NY
         </h2>
         <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
-          Door off-track? Broken spring? Car trapped? We dispatch a technician the same day — evenings, weekends, and holidays included.
+          Door off-track? Broken spring? Car trapped? We dispatch a technician the same day — open 7 days a week, 7am–7pm.
         </p>
         <a
           href={`tel:${BUSINESS.phoneRaw}`}

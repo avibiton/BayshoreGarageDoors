@@ -5,7 +5,7 @@ import { BUSINESS, COUPONS } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Contact & Request Service — Bay Shore Garage Door",
-  description: `Call ${BUSINESS.phone} for same-day garage door repair in Bay Shore NY. Request service online. Free written estimate. Real technician answers 24/7.`,
+  description: `Call ${BUSINESS.phone} for same-day garage door repair in Bay Shore NY. Request service online. Free written estimate. Open 7 days, 7am–7pm.`,
 };
 
 export default function ContactPage() {
@@ -24,14 +24,14 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[#091528]/80" />
         <div className="relative z-10">
           <h1 className="text-3xl md:text-4xl font-black text-white mb-3">Contact Bay Shore Garage Door</h1>
-          <p className="text-white/70 text-lg mb-6">Call any time — a real technician answers, not a call center</p>
+          <p className="text-white/70 text-lg mb-6">Call 7 days a week, 7am–7pm — a real technician answers, not a call center</p>
           <a
             href={`tel:${BUSINESS.phoneRaw}`}
             className="inline-flex items-center gap-2 bg-[#e8390e] text-white font-black text-2xl px-8 py-4 rounded-xl hover:bg-[#c62d0a] transition-colors"
           >
             📞 {BUSINESS.phone}
           </a>
-          <p className="text-white/50 text-sm mt-3">Available 24 hours · 7 days a week · Same-day service</p>
+          <p className="text-white/50 text-sm mt-3">Open 7 days a week · 7am–7pm · Same-day service</p>
         </div>
       </section>
 
@@ -46,14 +46,14 @@ export default function ContactPage() {
                 icon: "📞",
                 label: "Main Phone",
                 value: BUSINESS.phone,
-                sub: "Available 24/7. Same-day service throughout Bay Shore NY 11706 and all of Suffolk County.",
+                sub: "Open 7 days, 7am–7pm. Same-day service throughout Bay Shore NY 11706 and all of Suffolk County.",
                 href: `tel:${BUSINESS.phoneRaw}`,
               },
               {
                 icon: "🕐",
                 label: "Hours",
-                value: "24 Hours · 7 Days a Week",
-                sub: "Available when you need us — mornings, evenings, weekends, and holidays.",
+                value: BUSINESS.hours,
+                sub: "Monday through Sunday, 7:00am to 7:00pm.",
               },
               {
                 icon: "📍",

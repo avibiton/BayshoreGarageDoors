@@ -96,7 +96,7 @@ export default function ServiceAreasPage() {
           <a href={`tel:${BUSINESS.phoneRaw}`} className="inline-flex items-center gap-2 bg-[#e8390e] text-white font-black text-xl px-8 py-4 rounded-xl hover:bg-[#c62d0a] transition-colors">
             📞 {BUSINESS.phone}
           </a>
-          <p className="text-white/50 text-sm mt-3">Available 24/7 · Same-day service</p>
+          <p className="text-white/50 text-sm mt-3">Open 7 days, 7am–7pm · Same-day service</p>
         </div>
       </section>
     </div>

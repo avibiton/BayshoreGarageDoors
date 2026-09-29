@@ -3,7 +3,7 @@ const steps = [
     step: "01",
     icon: "📞",
     title: "You Call Us",
-    desc: "Call (631) 954-3148 any time — day or night. A real technician answers, not an automated system.",
+    desc: "Call (631) 954-3148 — open 7 days a week, 7am–7pm. A real technician answers, not an automated system.",
   },
   {
     step: "02",

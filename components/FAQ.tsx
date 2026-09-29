@@ -12,8 +12,8 @@ const faqs = [
     a: `Extension spring repair in Bay Shore starts from $165. Torsion spring replacement starts from $295. We provide a free written estimate before any work begins. The price we quote is the final price — no additions after the job is done. Use code SPRING10 for 10% off. Call ${BUSINESS.phone}.`,
   },
   {
-    q: "Do you work evenings and weekends in Bay Shore NY?",
-    a: `Yes — Bay Shore Garage Door is available evenings, weekends, and holidays throughout Bay Shore NY 11706. Call ${BUSINESS.phone} any time. A real technician answers every call — not an automated system.`,
+    q: "Do you work weekends in Bay Shore NY?",
+    a: `Yes — Bay Shore Garage Door is open 7 days a week, 7am–7pm, weekends included, throughout Bay Shore NY 11706. Call ${BUSINESS.phone}. A real technician answers every call — not an automated system.`,
   },
   {
     q: "Is there a warranty on garage door repairs in Bay Shore?",
@@ -65,7 +65,7 @@ export default function FAQ() {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-gray-600 mb-4">Have more questions? Call us any time — a real technician answers.</p>
+          <p className="text-gray-600 mb-4">Have more questions? Call us 7 days a week, 7am–7pm — a real technician answers.</p>
           <a
             href={`tel:${BUSINESS.phoneRaw}`}
             className="btn-primary"

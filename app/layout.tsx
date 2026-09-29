@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: `Bay Shore Garage Door — Same-Day Repair & Installation | Bay Shore NY`,
     template: `%s | Bay Shore Garage Door`,
   },
-  description: `Same-day garage door repair, spring replacement, opener installation & new door service in Bay Shore NY 11706. Call ${BUSINESS.phone} — real technician answers 24/7. Free written estimate.`,
+  description: `Same-day garage door repair, spring replacement, opener installation & new door service in Bay Shore NY 11706. Call ${BUSINESS.phone} — open 7 days, 7am–7pm. Free written estimate.`,
   keywords: ["garage door repair Bay Shore NY", "spring replacement Bay Shore", "garage door opener Bay Shore", "emergency garage door Suffolk County"],
   openGraph: {
     type: "website",

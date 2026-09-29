@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
         {/* Stats bar */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { value: "24/7", label: "Always Available" },
+            { value: "7am–7pm", label: "Open 7 Days" },
             { value: "2–4hr", label: "Response Time" },
             { value: "Free", label: "Written Estimate" },
             { value: "100%", label: "Satisfaction Guarantee" },

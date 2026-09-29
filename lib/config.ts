@@ -9,7 +9,7 @@ export const BUSINESS = {
   state: "NY",
   zip: "11706",
   county: "Suffolk County",
-  hours: "24 Hours · 7 Days a Week",
+  hours: "Open 7 Days · 7am–7pm",
   licenseInfo: "Licensed & Insured",
 };
 
@@ -63,9 +63,9 @@ export const SERVICES = [
     slug: "emergency-service",
     title: "Emergency Service",
     shortTitle: "Emergency",
-    description: "24/7 emergency garage door repair. Technician dispatched day or night, evenings, weekends & holidays.",
+    description: "Emergency garage door repair, open 7 days a week from 7am–7pm. Same-day technician dispatch, weekends included.",
     icon: "⚡",
-    price: "Available 24/7",
+    price: "Open 7 Days · 7am–7pm",
   },
   {
     slug: "cable-repair",

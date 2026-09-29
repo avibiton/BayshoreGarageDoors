@@ -150,7 +150,7 @@ export default function ContactForm() {
       <p className="text-center text-gray-500 text-xs">
         For immediate service call{" "}
         <a href={`tel:${BUSINESS.phoneRaw}`} className="text-[#e8390e] font-bold">{BUSINESS.phone}</a>
-        {" "}— available 24/7
+        {" "}— open 7 days, 7am–7pm
       </p>
     </form>
   );
