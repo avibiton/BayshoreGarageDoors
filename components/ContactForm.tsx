@@ -18,6 +18,8 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [botField, setBotField] = useState("");
 
   const validate = () => {
     const errs: Partial<FormData> = {};
@@ -28,7 +30,7 @@ export default function ContactForm() {
     if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
       errs.email = "Please enter a valid email address";
     if (!form.service) errs.service = "Please select a service";
-    if (!form.city.trim()) errs.city = "City or ZIP is required";
+    if (!form.city.trim()) errs.city = "Town or ZIP is required";
     return errs;
   };
 
@@ -40,11 +42,25 @@ export default function ContactForm() {
       return;
     }
     setSubmitting(true);
-    // Placeholder: log to console until backend is wired
-    console.log("Service request:", form);
-    await new Promise((r) => setTimeout(r, 800));
-    setSubmitted(true);
-    setSubmitting(false);
+    setSubmitError(false);
+    try {
+      const body = new URLSearchParams({
+        "form-name": "service-request",
+        "bot-field": botField,
+        ...form,
+      }).toString();
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
+      setSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const field = (key: keyof FormData) => ({
@@ -64,7 +80,7 @@ export default function ContactForm() {
           We&apos;ll call you back shortly. For immediate service call{" "}
           <a href={`tel:${BUSINESS.phoneRaw}`} className="text-[#e8390e] font-bold">{BUSINESS.phone}</a>
         </p>
-        <button onClick={() => { setSubmitted(false); setForm(initialForm); }} className="btn-primary">
+        <button onClick={() => { setSubmitted(false); setForm(initialForm); setBotField(""); }} className="btn-primary">
           Submit Another Request
         </button>
       </div>
@@ -77,20 +93,26 @@ export default function ContactForm() {
     }`;
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+    <form name="service-request" onSubmit={handleSubmit} noValidate className="space-y-5">
+      <p className="hidden" aria-hidden="true">
+        <label>
+          Don&apos;t fill this out if you&apos;re human:{" "}
+          <input name="bot-field" tabIndex={-1} autoComplete="off" value={botField} onChange={(e) => setBotField(e.target.value)} />
+        </label>
+      </p>
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="name">
             Full Name <span className="text-red-500">*</span>
           </label>
-          <input id="name" type="text" placeholder="John Smith" className={inputClass("name")} {...field("name")} />
+          <input id="name" name="name" type="text" placeholder="John Smith" className={inputClass("name")} {...field("name")} />
           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
         </div>
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="phone">
             Phone Number <span className="text-red-500">*</span>
           </label>
-          <input id="phone" type="tel" placeholder="(631) 555-0000" className={inputClass("phone")} {...field("phone")} />
+          <input id="phone" name="phone" type="tel" placeholder="(631) 555-0000" className={inputClass("phone")} {...field("phone")} />
           {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
         </div>
       </div>
@@ -100,14 +122,14 @@ export default function ContactForm() {
           <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="email">
             Email Address
           </label>
-          <input id="email" type="email" placeholder="john@example.com" className={inputClass("email")} {...field("email")} />
+          <input id="email" name="email" type="email" placeholder="john@example.com" className={inputClass("email")} {...field("email")} />
           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="city">
-            City / ZIP <span className="text-red-500">*</span>
+            Town / ZIP <span className="text-red-500">*</span>
           </label>
-          <input id="city" type="text" placeholder="Bay Shore NY 11706" className={inputClass("city")} {...field("city")} />
+          <input id="city" name="city" type="text" placeholder="Bay Shore NY 11706" className={inputClass("city")} {...field("city")} />
           {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
         </div>
       </div>
@@ -116,7 +138,7 @@ export default function ContactForm() {
         <label className="block text-sm font-semibold text-gray-700 mb-1" htmlFor="service">
           Service Needed <span className="text-red-500">*</span>
         </label>
-        <select id="service" className={inputClass("service")} {...field("service")}>
+        <select id="service" name="service" className={inputClass("service")} {...field("service")}>
           <option value="">Select a service...</option>
           {SERVICES.map((s) => (
             <option key={s.slug} value={s.title}>{s.title}</option>
@@ -132,12 +154,20 @@ export default function ContactForm() {
         </label>
         <textarea
           id="message"
+          name="message"
           rows={4}
           placeholder="Describe what's happening with your garage door..."
           className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-[#e8390e] transition resize-none"
           {...field("message")}
         />
       </div>
+
+      {submitError && (
+        <p className="text-red-600 text-sm text-center bg-red-50 border border-red-200 rounded-lg p-3" role="alert">
+          Sorry, we couldn&apos;t send your request. Please call us at{" "}
+          <a href={`tel:${BUSINESS.phoneRaw}`} className="font-bold underline">{BUSINESS.phone}</a>.
+        </p>
+      )}
 
       <button
         type="submit"
