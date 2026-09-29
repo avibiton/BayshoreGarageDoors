@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Old-URL redirects (see docs/old-url-redirects.md).
+# The only old page URL not served by the new site is /index.html, which is
+# already redirected (301) to / in next.config.ts, so it is not duplicated here.
