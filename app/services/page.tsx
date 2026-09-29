@@ -6,6 +6,7 @@ import { BUSINESS, SERVICES } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Garage Door Services — Bay Shore Garage Door",
   description: `Garage door repair, spring replacement, opener installation, and new door service in Bay Shore NY. Same-day service. Call ${BUSINESS.phone}.`,
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

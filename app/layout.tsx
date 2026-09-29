@@ -14,6 +14,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://${BUSINESS.website}`),
   title: {
     default: `Bay Shore Garage Door — Same-Day Repair & Installation | Bay Shore NY`,
     template: `%s | Bay Shore Garage Door`,

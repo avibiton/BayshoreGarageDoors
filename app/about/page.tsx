@@ -6,6 +6,7 @@ import { BUSINESS } from "@/lib/config";
 export const metadata: Metadata = {
   title: "About — Bay Shore Garage Door",
   description: `Learn about Bay Shore Garage Door — your local garage door experts in Bay Shore NY 11706. Same-day service, free estimates, written warranty. Call ${BUSINESS.phone}.`,
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

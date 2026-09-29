@@ -101,6 +101,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.title} — Bay Shore NY | Bay Shore Garage Door`,
     description: `${service.description} Call ${BUSINESS.phone} for same-day service in Bay Shore NY 11706.`,
+    alternates: { canonical: `/services/${service.slug}` },
   };
 }
 

@@ -6,6 +6,7 @@ import { BUSINESS, COUPONS } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Contact & Request Service — Bay Shore Garage Door",
   description: `Call ${BUSINESS.phone} for same-day garage door repair in Bay Shore NY. Request service online. Free written estimate. Open 7 days, 7am–7pm.`,
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

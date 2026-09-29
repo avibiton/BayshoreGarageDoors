@@ -7,7 +7,12 @@ import OurPromise from "@/components/OurPromise";
 import ServiceAreaSection from "@/components/ServiceAreaSection";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
+import type { Metadata } from "next";
 import { BUSINESS } from "@/lib/config";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   const schema = {

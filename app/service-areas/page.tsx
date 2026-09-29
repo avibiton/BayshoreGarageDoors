@@ -6,6 +6,7 @@ import { BUSINESS, SERVICE_AREAS } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Service Areas — Bay Shore Garage Door | Suffolk County NY",
   description: `Bay Shore Garage Door serves Bay Shore, Islip, West Islip, Brentwood, Deer Park and all of Suffolk County. Same-day service. Call ${BUSINESS.phone}.`,
+  alternates: { canonical: "/service-areas" },
 };
 
 const areaDetails = [
