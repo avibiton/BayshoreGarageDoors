@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
           {[
             { value: "24/7", label: "Always Available" },
             { value: "2–4hr", label: "Response Time" },
-            { value: "5.0★", label: "Average Rating" },
+            { value: "Free", label: "Written Estimate" },
             { value: "100%", label: "Satisfaction Guarantee" },
           ].map((s) => (
             <div key={s.label} className="text-center bg-[#0f1f3d] rounded-xl py-6 px-4">

@@ -3,7 +3,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import ProcessSteps from "@/components/ProcessSteps";
-import Testimonials from "@/components/Testimonials";
+import OurPromise from "@/components/OurPromise";
 import ServiceAreaSection from "@/components/ServiceAreaSection";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
@@ -29,7 +29,6 @@ export default function Home() {
     },
     geo: { "@type": "GeoCoordinates", latitude: 40.7279, longitude: -73.2524 },
     openingHours: "Mo-Su 00:00-24:00",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", reviewCount: BUSINESS.reviewCount },
     areaServed: [
       { "@type": "City", name: "Bay Shore" },
       { "@type": "City", name: "Islip" },
@@ -76,7 +75,7 @@ export default function Home() {
       <WhyChooseUs />
       <EmergencyBanner />
       <ProcessSteps />
-      <Testimonials />
+      <OurPromise />
       <ServiceAreaSection />
       <FAQ />
 

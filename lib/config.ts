@@ -10,8 +10,6 @@ export const BUSINESS = {
   zip: "11706",
   county: "Suffolk County",
   hours: "24 Hours · 7 Days a Week",
-  rating: "5.0",
-  reviewCount: 147,
   licenseInfo: "Licensed & Insured",
 };
 

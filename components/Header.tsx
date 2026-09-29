@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-[#0f1f3d] shadow-lg">
       {/* Top bar */}
       <div className="bg-[#091528] py-1.5 px-4 text-center text-sm text-white/80 hidden md:block">
-        <span className="mr-4">⭐⭐⭐⭐⭐ Rated 5.0 · Bay Shore NY · Suffolk County</span>
+        <span className="mr-4">Bay Shore NY · Suffolk County</span>
         <span>Licensed &amp; Insured · Same-Day Service · Free Written Estimate</span>
       </div>
 

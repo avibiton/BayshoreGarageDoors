@@ -75,9 +75,7 @@ export default function Hero() {
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <div className="text-center mb-6">
               <div className="text-5xl mb-3">🏠</div>
-              <div className="text-yellow-400 text-xl mb-1">⭐⭐⭐⭐⭐</div>
-              <div className="text-white font-bold">Rated 5.0 · {BUSINESS.reviewCount}+ Reviews</div>
-              <div className="text-white/60 text-sm">Bay Shore NY · Suffolk County</div>
+              <div className="text-white font-bold">Bay Shore NY · Suffolk County</div>
             </div>
 
             <div className="space-y-4">
